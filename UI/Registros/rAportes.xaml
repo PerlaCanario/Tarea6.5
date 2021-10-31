@@ -1,0 +1,20 @@
+﻿<Window x:Class="Tarea6._5.UI.Registros.rAportes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tarea6._5.UI.Registros"
+        mc:Ignorable="d"
+        Title="rAportes" Height="350" Width="400">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Vertical" Margin="10,0,0,0">
+                <Label Content="Aportes Id:" />
+                <TextBox x:Name="PersonaIdTextBox" Text="{Binding PersonaId}"  Width="126"  Height="18" HorizontalAlignment="Left" Margin="0,0,0,5"/>
+                <Label Content="Fecha"  Width="42" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <DatePicker x:Name="DesdeDatePicker" Width="144" HorizontalAlignment="Left"/>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Window>
