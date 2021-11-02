@@ -5,16 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tarea6._5.UI.Registros"
         mc:Ignorable="d"
-        Title="rAportes" Height="350" Width="400">
-    <Grid>
-        <StackPanel>
+        Title="rAportes" Height="437" Width="477">
+    <Grid Margin="0,0,0,189">
+        <StackPanel Height="330" VerticalAlignment="Top">
             <StackPanel Orientation="Vertical" Margin="10,0,0,0">
                 <Label Content="Aportes Id:" />
-                <TextBox x:Name="PersonaIdTextBox" Text="{Binding PersonaId}"  Width="126"  Height="18" HorizontalAlignment="Left" Margin="0,0,0,5"/>
-                <Label Content="Fecha"  Width="42" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBox x:Name="AporteIdTextBox" Text="{Binding AporteId}"  Width="126"  Height="18" HorizontalAlignment="Left" Margin="0,0,0,5"/>
+                <Label Content="Fecha:"  Width="42" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                 <DatePicker x:Name="DesdeDatePicker" Width="144" HorizontalAlignment="Left"/>
             </StackPanel>
-            
+
+            <StackPanel Orientation="Vertical" Margin="10,0,0,0">
+                <Label Content="Personal Id:" />
+                <TextBox x:Name="PersonaIdTextBox" Text="{Binding PersonaId}"  Width="126"  Height="18" HorizontalAlignment="Left" Margin="0,0,0,5"/>
+                <Label Content="Concepto:"  Width="72" Height="26" HorizontalAlignment="Left"/>
+                <TextBox x:Name="ConceptoTextBox" Text="{Binding ConceptoId}"  Width="126"  Height="18" HorizontalAlignment="Left" Margin="0,0,0,5"/>
+            </StackPanel>
+            <DataGrid x:Name="AportesDataGrid" AutoGenerateColumns="False" Width="327">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Tipo" Binding="{Binding AportesId}"/>
+                    <DataGridTextColumn Header="Valor" Binding="{Binding Fecha}"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal" Margin="10,10,0,0" RenderTransformOrigin="0.502,0.486" Height="33" Width="705"  >
+
+                <Label Content="Total: " Width="268" HorizontalContentAlignment="Right" Padding="5,5,5,5" Height="55"/>
+                <TextBox x:Name="TotalTextBox"  Width="100" Height="26" VerticalAlignment="Top"/>
+
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </Window>
